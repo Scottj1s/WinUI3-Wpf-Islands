@@ -6,7 +6,7 @@ namespace winrt::RuntimeComponent::implementation
 {
     struct Class : ClassT<Class>
     {
-        Class() = default;
+        Class();
 
         int32_t MyProperty();
         void MyProperty(int32_t value);

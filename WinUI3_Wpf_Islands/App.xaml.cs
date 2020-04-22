@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace WinUI3_Wpf_Islands
-{
+{ 
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>

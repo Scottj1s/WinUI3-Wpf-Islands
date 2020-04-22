@@ -6,12 +6,17 @@
     <NoWarn>0618</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\RuntimeComponent\RuntimeComponent.vcxproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.0.200417.3" GeneratePathProperty="true" />
+    <PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.0.200421.1" GeneratePathProperty="true" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +40,7 @@
         -exclude Windows.UI.Xaml
         -include Windows.UI.Xaml.Interop
         -exclude Windows.ApplicationModel.Store.Preview
+        -exclude Windows.Foundation.Diagnostics
         # Note: WUX attribute definitions are hardcoded into the kit's WinRTBase.idl.
         # The WinUI nuget should provide a custom version of this file to produce MUX-only winmds.
         # In the meantime, we'll continue to project the WUX attributes.
